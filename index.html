@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pomodoro Timer</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'>
+    
+</head>
+<body>
+    <div class="container">
+      <header>
+        <h1>Pomadoro Timer</h1>
+        <a id="nav-toggle" class="menu-toggle" href="#"><span></span></a>
+    <!--     <a href="#" class="menu-toggle hamburger"></a> -->
+        <nav class="menu-side">
+          <div class="option option-session">Session
+            <span class="plus">+</span>
+            <span class="option-time" id="session">25:00</span>
+            <span class="minus">–</span>
+          </div>
+          <div class="option option-break">Break
+            <span class="plus">+</span>
+            <span class="option-time" id="break">05:00</span>
+            <span class="minus">–</span></div>
+        </nav>
+      </header>
+      
+      <main class="content">
+        <div class="state"></div>
+        <div class="timer" id="time"><span class="minute">25</span>:<span class="second">00</span></div>
+        <div class="quote">Aim higher. Stay focused.</div>
+        <div class="button button-start">Start</div>
+        <div class="button button-stop">Stop</div>
+        <div class="button button-reset">Reset</div>
+      </main>
+    </div>
+    
+    <!-- jQuery -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

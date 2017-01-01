@@ -1,0 +1,285 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  cursor: arrow;
+  font-family: 'Alegreya Sans', sans-serif;
+  background: linear-gradient(0deg, #586360, #90b490, #277e83);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 22s ease infinite;
+  -moz-animation: AnimationName 22s ease infinite;
+  animation: AnimationName 22s ease infinite;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */ 
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 81%
+  }
+  50% {
+    background-position: 100% 20%
+  }
+  100% {
+    background-position: 0% 81%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 81%
+  }
+  50% {
+    background-position: 100% 20%
+  }
+  100% {
+    background-position: 0% 81%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 81%
+  }
+  50% {
+    background-position: 100% 20%
+  }
+  100% {
+    background-position: 0% 81%
+  }
+}
+
+header {
+  width: 100%;
+  height: 3.5rem;
+  background: black;
+}
+
+header h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 1.8em;
+  margin: 0;
+  padding: 13px 0 0 10px;
+}
+
+.hamburger {
+  /*   background: grey; */
+  position: absolute;
+  padding: 1.6em 1em 0;
+  right: 2em;
+  top: 1em;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.hamburger:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 2em;
+  height: 0.3em;
+  background: white;
+  box-shadow: 0 0.55em 0 0 white, 0 1.1em 0 0 white;
+}
+
+.content {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+
+.menu-open {
+  left: 300px;
+}
+
+.menu-open .menu-side {
+  left: 0;
+}
+
+.menu-side,
+.content {
+  -webkit-transition: left 0.4s ease;
+  -moz-transition: left 0.4s ease;
+  transition: left 0.4s ease;
+}
+
+.menu-side {
+  background-color: #333;
+  border-right: 1px solid #000;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 230px;
+  height: 100%;
+  padding: 5px;
+}
+
+
+/* create an arrow that points up */
+
+span.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  /* left arrow slant */
+  border-right: 25px solid transparent;
+  /* right arrow slant */
+  border-bottom: 25px double #fff;
+  /* bottom, add background color here */
+  border-top: 25px double #fff;
+  font-size: 0;
+  line-height: 0;
+}
+
+#nav-toggle {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
+#nav-toggle {
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+#nav-toggle span:before {
+  top: -10px;
+}
+
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  transition: all 500ms ease-in-out;
+}
+
+#nav-toggle.active span {
+  background-color: transparent;
+}
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+  top: 0;
+}
+
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+.option {
+  background-color: #3f3f3f;
+  padding: 20px;
+  margin-bottom: 4px;
+}
+
+.option-time {
+  padding: 5px;
+  float: right;
+}
+
+.plus {
+  float: right;
+  padding: 2px 9px;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.minus {
+  float: right;
+  padding: 2px 9px;
+  margin: 0;
+  font-weight: bold;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.plus:hover {
+  background: #6f6f6f;
+  cursor: pointer;
+}
+
+.minus:hover {
+  background: #6f6f6f;
+  cursor: pointer;
+}
+
+.timer {
+  border-radius: 10px;
+  font-size: 6em;
+  margin: 0.2em auto;
+  text-align: center;
+  color: #00aa55;
+  text-shadow: 1px 1px 5px #00dd44,
+   5px 2px 7px #5f5f5f;
+}
+
+.quote {
+  margin: 0 auto;
+  font-style: italic;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 10px;
+  max-width: 400px;
+}
+
+.button {
+  border-radius: 10px;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  margin: 100px auto;
+}
+
+.button-start {
+  background-color: #1ECE6C;
+  box-shadow: 3px 3px 5px #1AAF5D;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #626065;
+}
+
+.button-stop {
+  background-color: #BE1238;
+  box-shadow: 3px 3px 5px #8B0000;
+  display: none;
+}
+
+.button-reset {
+  border: #1ECE6C solid 3px;
+}
+.state h1 { text-align: center; }
